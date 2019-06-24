@@ -1,0 +1,57 @@
+{
+    // "tasks": [
+    //     {
+    //         "type": "shell",
+    //         "label": "gcc build active file",
+    //         "command": "/usr/bin/gcc",
+    //         "args": [
+    //             "-g",
+    //             "${file}",
+    //             "-o",
+    //             "${fileDirname}/${fileBasenameNoExtension}"
+    //         ],
+    //         "options": {
+    //             "cwd": "/usr/bin"
+    //         }
+    //     },
+    //     {
+    //         "type": "shell",
+    //         "label": "gcc build active file",
+    //         "command": "/usr/bin/gcc",
+    //         "args": [
+    //             "-g",
+    //             "${file}",
+    //             "-o",
+    //             "${fileDirname}/${fileBasenameNoExtension}"
+    //         ],
+    //         "options": {
+    //             "cwd": "/usr/bin"
+    //         },
+    //         "problemMatcher": [
+    //             "$gcc"
+    //         ]
+    //     }
+    // ],
+    "version": "2.0.0",
+    "tasks":[
+        {
+            
+            "taskName":"build",
+            "command":"make",
+            "args":["default"],
+            "type":"shell"
+        },
+        {
+            "taskName":"build-debug",
+            "command":"make",
+            "args": ["clean&&make"],
+            "type": "shell"
+        },
+        {
+            "taskName": "clean",
+            "command":"make",
+            "args": ["clean"],
+            "type":"shell"
+        }
+    ]
+}
